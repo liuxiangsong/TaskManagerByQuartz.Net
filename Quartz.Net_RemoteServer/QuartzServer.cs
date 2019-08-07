@@ -43,13 +43,15 @@ namespace Quartz.Net_RemoteServer
             //表名前缀
             properties["quartz.jobStore.tablePrefix"] = "qrtz_";
             //驱动类型
-            properties["quartz.jobStore.driverDelegateType"] = "Quartz.Impl.AdoJobStore.MySQLDelegate, Quartz";
+            //properties["quartz.jobStore.driverDelegateType"] = "Quartz.Impl.AdoJobStore.MySQLDelegate, Quartz";
+            properties["quartz.jobStore.driverDelegateType"] = "Quartz.Impl.AdoJobStore.SqlServerDelegate, Quartz";
             //数据源名称
             properties["quartz.jobStore.dataSource"] = "myDS";
             //连接字符串
             properties["quartz.dataSource.myDS.connectionString"] = ConfigurationManager.AppSettings["connectionString"];
             //版本
-            properties["quartz.dataSource.myDS.provider"] = "MySql-695";
+            //properties["quartz.dataSource.myDS.provider"] = "MySql-695";
+            properties["quartz.dataSource.myDS.provider"] = "SqlServer-20";
             properties["quartz.scheduler.instanceId"] = ConfigurationManager.AppSettings["intanceId"]; 
           
 
